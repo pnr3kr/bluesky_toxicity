@@ -1,0 +1,6 @@
+duckdb
+atproto
+requests
+pandas
+matplotlib
+seaborn
