@@ -56,6 +56,20 @@ Bluesky Firehose (websocket)
   <img src="plots/most_common_toxic_words_barplot.png" width="49%">
 </p>
 
+### Toxic vs. ordinary vocabulary
+
+Word clouds over the two ends of the distribution — posts scoring **≥ 0.7** against posts scoring **< 0.1**.
+
+**Highly toxic posts (≥ 0.7)**
+
+![Most common words in highly toxic posts](plots/most_common_toxic_words.png)
+
+**Low-toxicity posts (< 0.1)**
+
+![Most common words in low-toxicity posts](plots/least_toxic_common_words.png)
+
+Stopwords are removed from both, so what remains is the vocabulary that actually separates them. Profanity dominates the toxic cloud — *fuck* (74), *shit* (68), *fucking* (65), *ass*, *stupid*, *asshole* — and is entirely absent below it, where the most frequent terms are ordinary conversation: *good*, *love*, *time*, *thank*, *new*, *happy*.
+
 ## Model
 
 TF-IDF (20,000 features, unigrams + bigrams, English stopwords removed) → Ridge regression (`alpha=1.0`), 80/20 split.
